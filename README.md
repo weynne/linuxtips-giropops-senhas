@@ -79,11 +79,11 @@ Dica: Preste atenção no uso da variável de ambiente, precisamos ter a variáv
     ```
 	- Crie um container utilizando a network que acabamos de criar e utilize a imagem do Redis
 	```
-    docker container run -d -p 6379:6379 --network netgiropops --name redis redis
+    docker container run -d -p 6379:6379 --network net-giropops-senhas --name redis redis
     ```
 	- Crie um container utilizando a imagem SEU_USUARIO_NO_DOCKER_HUB/linuxtips-giropops-senhas:1.0
     ```
-    docker container run -d -p 5000:5000 --network netgiropops --env REDIS_HOST=redis --name giropops-senhasSEU_USUARIO_NO_DOCKER_HUB/linuxtips-giropops-senhas:1.0
+    docker container run -d -p 5000:5000 --network net-giropops-senhas --env REDIS_HOST=redis --name giropops-senhas SEU_USUARIO_NO_DOCKER_HUB/linuxtips-giropops-senhas:1.0
     ```
 	- Por fim acesse o seu navegador utilizando a url: **localhost:5000**
 
